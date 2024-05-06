@@ -1,0 +1,11 @@
+<script setup lang="ts">
+import "vue-router";
+import Footer from "./components/Footer.vue";
+</script>
+
+<template>
+  <router-view />
+  <Footer />
+</template>
+
+<style scoped></style>
