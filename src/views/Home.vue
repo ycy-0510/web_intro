@@ -10,7 +10,7 @@
       </p>
       <div class="flex flex-col items-center">
         <button
-          class="bg-blue-500 hover:bg-blue-600 text-white text-lg font-bold py-3 px-6 rounded-xl text-center mb-4 border border-white animate-bounce hover:animate-none"
+          class="bg-sky-500 hover:bg-sky-600 text-white text-lg font-bold py-3 px-6 rounded-xl text-center mb-4 animate-bounce hover:animate-none"
           @click="scrollToContent"
         >
           立即開始
@@ -34,7 +34,7 @@
           <p class="text-2xl text-gray-200 mb-4">連結世界的橋樑：解析網域與DNS的重要性</p>
           <RouterLink
             to="/domain-dns"
-            class="bg-white hover:bg-gray-200 text-blue-500 font-bold py-2 px-4 rounded-xl text-center text-lg border border-blue-500"
+            class="bg-white hover:bg-gray-200 text-sky-500 font-bold py-2 px-4 rounded-xl text-center text-lg"
           >
             完整教學</RouterLink
           >
@@ -55,7 +55,7 @@
           </p>
           <RouterLink
             to="/vue"
-            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl text-center text-lg border border-gray-400"
+            class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded-xl text-center text-lg"
           >
             完整教學</RouterLink
           >
@@ -76,7 +76,7 @@
           </p>
           <RouterLink
             to="/git-flow"
-            class="bg-white hover:bg-gray-200 text-blue-500 font-bold py-2 px-4 rounded-xl text-center text-lg border border-blue-500"
+            class="bg-white hover:bg-gray-200 text-sky-500 font-bold py-2 px-4 rounded-xl text-center text-lg"
           >
             完整教學</RouterLink
           >
