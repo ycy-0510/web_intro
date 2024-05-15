@@ -87,9 +87,13 @@
 </template>
 
 <script setup lang="ts">
-import { Ref, ref } from "vue";
+import { Ref, ref, onMounted } from "vue";
 
 const contentElement: Ref = ref(null);
+
+onMounted(() => {
+  window.scrollTo(0, 0);
+});
 
 const scrollToContent = () => {
   contentElement.value?.scrollIntoView({ behavior: "smooth" });
