@@ -165,12 +165,11 @@
     </div>
   </main>
 </template>
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { RouterLink } from "vue-router";
 
 const scrolled = ref(false);
-const main = ref(null);
 
 window.addEventListener("scroll", () => handleScroll());
 
