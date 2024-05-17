@@ -6,7 +6,7 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-  },
+	},
   plugins: [],
 } satisfies Config
 
