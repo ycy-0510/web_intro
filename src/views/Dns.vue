@@ -36,27 +36,27 @@
       :class="{ 'translate-x-72': showMenu }">
       <ul class="p-3 bg-white rounded-xl m-4">
         <li class="text-lg py-2">
-          <a href="#什麼是網域" @click="toggleMenu">什麼是網域</a>
+          <a href="#什麼是網域" @click="closeMenu">什麼是網域</a>
         </li>
         <hr>
         <li class="text-lg py-2">
-          <a href="#常見的頂級域名" @click="toggleMenu">常見的頂級域名</a>
+          <a href="#常見的頂級域名" @click="closeMenu">常見的頂級域名</a>
         </li>
         <hr>
         <li class="text-lg py-2">
-          <a href="#子網域與子目錄" @click="toggleMenu">子網域與子目錄</a>
+          <a href="#子網域與子目錄" @click="closeMenu">子網域與子目錄</a>
         </li>
         <hr>
         <li class="text-lg py-2">
-          <a href="#哪裡可以買網域" @click="toggleMenu">哪裡可以買網域</a>
+          <a href="#哪裡可以買網域" @click="closeMenu">哪裡可以買網域</a>
         </li>
         <hr>
         <li class="text-lg py-2">
-          <a href="#什麼是DNS" @click="toggleMenu">什麼是DNS</a>
+          <a href="#什麼是DNS" @click="closeMenu">什麼是DNS</a>
         </li>
         <hr>
         <li class="text-lg py-2">
-          <a href="#常見的 DNS record" @click="toggleMenu">常見的 DNS record</a>
+          <a href="#常見的 DNS record" @click="closeMenu">常見的 DNS record</a>
         </li>
       </ul>
     </div>
@@ -141,8 +141,11 @@ const handleScroll = () => {
   }
 };
 
-const openMenu = () => showMenu.value = true;
-const closeMenu = () => showMenu.value = false;
-const toggleMenu = () => showMenu.value = !showMenu.value;
+const closeMenu = () => {
+  showMenu.value = false;
+}
+const toggleMenu = () => {
+  showMenu.value = !showMenu.value;
+}
 </script>
 <style scoped></style>
