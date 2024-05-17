@@ -5,7 +5,7 @@
         ' bg-gray-50 border-b border-b-gray-300': scrolled,
         'bg-gray-100': !scrolled,
       }">
-        <div class="basis-40 m-auto px-5 py-2">
+        <div class="basis-40 my-auto ms-auto py-2 ps-2">
           <a @click="router.go(-1)" class="text-2xl font-medium flex items-center text-sky-500 hover:text-sky-300">
             <font-awesome-icon icon="fa-solid fa-angle-left" class="h-8 me-1" /><span>Home</span>
           </a>
@@ -19,7 +19,7 @@
   </div>
   <main ref="main" class=" bg-gray-100">
     <div class="py-2 px-5 md:px-20 lg:px-30">
-      <h3 class="text-2xl font-medium mt-10 mb-4">什麼是網域</h3>
+      <h3 class="text-2xl font-medium mt-10 mb-4 px-2">什麼是網域</h3>
       <div class=" bg-white p-4 rounded-xl">
         <p class="text-lg">
           網域是網絡上的一個組織單位，它由一個或多個主機組成，這些主機共享相同的域名後綴。網域名稱通常由多個部分組成，以點分隔，例如
@@ -30,7 +30,7 @@
           <img src="/domain/1.svg" alt="">
         </div>
       </div>
-      <h3 class="text-2xl font-medium mt-10 mb-4">常見的頂級域名</h3>
+      <h3 class="text-2xl font-medium mt-10 mb-4 px-2">常見的頂級域名</h3>
       <div class=" bg-white p-4 rounded-xl">
         <p class="text-lg">
           頂級域名 (Top-Level Domain, TLD)
@@ -38,7 +38,7 @@
           ".com", ".org", ".net", ".edu", ".gov", ".mil", ".int", ".io", ".xyz"
         </p>
       </div>
-      <h3 class="text-2xl font-medium mt-10 mb-4">子網域與子目錄</h3>
+      <h3 class="text-2xl font-medium mt-10 mb-4 px-2">子網域與子目錄</h3>
       <div class=" bg-white p-4 rounded-xl">
         <p class="text-lg">
           子網域 (Subdomain) 是網域名稱的一部分，通常用於區分網站的不同部分或功能。例如，"blog.example.com"
@@ -46,21 +46,21 @@
           "example.com/blog" 中的 "/blog" 就是一個子目錄。
         </p>
       </div>
-      <h3 class="text-2xl font-medium mt-10 mb-4">哪裡可以買網域</h3>
+      <h3 class="text-2xl font-medium mt-10 mb-4 px-2">哪裡可以買網域</h3>
       <div class=" bg-white p-4 rounded-xl">
         <p class="text-lg">
           網域名稱可以在許多網域註冊商 (Domain Registrar) 購買，例如 GoDaddy、Namecheap、Google
           Domains 等。您可以在這些網站上搜索您想要的網域名稱，並進行購買和註冊。
         </p>
       </div>
-      <h3 class="text-2xl font-medium mt-10 mb-4">什麼是DNS</h3>
+      <h3 class="text-2xl font-medium mt-10 mb-4 px-2">什麼是DNS</h3>
       <div class=" bg-white p-4 rounded-xl">
         <p class="text-lg">
           DNS (Domain Name System) 是一個用於將域名轉換為 IP 地址的分散式命名系統。當您在瀏覽器中輸入一個網址時，瀏覽器會向 DNS
           伺服器發送請求，詢問該網址對應的 IP 地址。DNS 伺服器會返回相應的 IP 地址，使瀏覽器能夠連接到該網站的伺服器。
         </p>
       </div>
-      <h3 class="text-2xl font-medium mt-10 mb-4">常見的 DNS record</h3>
+      <h3 class="text-2xl font-medium mt-10 mb-4 px-2">常見的 DNS record</h3>
       <div class=" bg-white p-4 rounded-xl">
         <p class="text-lg">
           DNS 記錄 (DNS Record) 是 DNS 伺服器中存儲的資訊，用於將域名映射到 IP 地址、郵件伺服器、子網域等。常見的 DNS
@@ -75,6 +75,7 @@
         </p>
       </div>
     </div>
+    <div class=" h-10"></div>
   </main>
 </template>
 <script setup lang="ts">
