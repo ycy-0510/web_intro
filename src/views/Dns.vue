@@ -18,49 +18,50 @@
       </div>
     </nav>
   </div>
-  <main ref="main" class=" bg-gray-100">
-    <div class="fixed  left-5 bottom-10 z-40">
-      <button @click="toggleMenu"
-        class=" bg-gray-200  text-sky-500 shadow-lg h-20 w-20 rounded-full transition-transform duration-500 delay-0"
-        :class="{ ' translate-x-72': showMenu }">
-        <font-awesome-icon icon="fa-solid fa-bars" class="h-1/2 transition-transform duration-500"
-          :class="{ 'rotate-90 w-0 h-0 opacity-0': showMenu }" />
-        <font-awesome-icon icon="fa-solid fa-close" class="h-1/2 transition-transform duration-500"
-          :class="{ '-rotate-90 w-0 h-0  opacity-0': !showMenu }" />
-      </button>
-    </div>
-    <div class="fixed w-screen h-lvh z-30 bg-black  transition-opacity duration-500 ease-in-out"
-      :class="{ 'opacity-30': showMenu, 'opacity-0': !showMenu }" @click="closeMenu">
-    </div>
-    <div class="fixed w-72 h-lvh z-40 bg-gray-100 menu -left-72  transition-transform duration-500 ease-in-out"
+
+  <div class="fixed  left-5 bottom-10 z-40 transition-transform duration-500 lg:scale-0">
+    <button @click="toggleMenu"
+      class=" bg-gray-200  text-sky-500 shadow-lg h-20 w-20 rounded-full transition-transform duration-500 ease-in-out"
       :class="{ 'translate-x-72': showMenu }">
-      <ul class="p-3 bg-white rounded-xl m-4">
-        <li class="text-lg py-2">
-          <a href="#什麼是網域" @click="closeMenu">什麼是網域</a>
-        </li>
-        <hr>
-        <li class="text-lg py-2">
-          <a href="#常見的頂級域名" @click="closeMenu">常見的頂級域名</a>
-        </li>
-        <hr>
-        <li class="text-lg py-2">
-          <a href="#子網域與子目錄" @click="closeMenu">子網域與子目錄</a>
-        </li>
-        <hr>
-        <li class="text-lg py-2">
-          <a href="#哪裡可以買網域" @click="closeMenu">哪裡可以買網域</a>
-        </li>
-        <hr>
-        <li class="text-lg py-2">
-          <a href="#什麼是DNS" @click="closeMenu">什麼是DNS</a>
-        </li>
-        <hr>
-        <li class="text-lg py-2">
-          <a href="#常見的 DNS record" @click="closeMenu">常見的 DNS record</a>
-        </li>
-      </ul>
-    </div>
-    <div class="py-2 px-5 md:px-20 lg:px-30">
+      <font-awesome-icon icon="fa-solid fa-bars" class="h-1/2 transition-transform duration-500 ease-in-out"
+        :class="{ 'rotate-90 w-0 h-0 opacity-0': showMenu }" />
+      <font-awesome-icon icon="fa-solid fa-close" class="h-1/2 transition-transform duration-500 ease-in-out"
+        :class="{ '-rotate-90 w-0 h-0  opacity-0': !showMenu }" />
+    </button>
+  </div>
+  <div class="fixed w-screen h-lvh z-30 bg-black transition-opacity duration-500 ease-in-out lg:hidden"
+    :class="{ 'opacity-30': showMenu, 'opacity-0': !showMenu }" @click="closeMenu">
+  </div>
+  <div class="fixed w-72 h-lvh z-40 bg-gray-100 menu -left-72  transition-transform duration-500 ease-in-out lg:translate-x-72"
+    :class="{ 'translate-x-72': showMenu }">
+    <ul class="px-4 py-2 bg-white rounded-xl m-4">
+      <li class="text-lg py-2">
+        <a href="#什麼是網域" @click="closeMenu">什麼是網域</a>
+      </li>
+      <hr>
+      <li class="text-lg py-2">
+        <a href="#常見的頂級域名" @click="closeMenu">常見的頂級域名</a>
+      </li>
+      <hr>
+      <li class="text-lg py-2">
+        <a href="#子網域與子目錄" @click="closeMenu">子網域與子目錄</a>
+      </li>
+      <hr>
+      <li class="text-lg py-2">
+        <a href="#哪裡可以買網域" @click="closeMenu">哪裡可以買網域</a>
+      </li>
+      <hr>
+      <li class="text-lg py-2">
+        <a href="#什麼是DNS" @click="closeMenu">什麼是DNS</a>
+      </li>
+      <hr>
+      <li class="text-lg py-2">
+        <a href="#常見的 DNS record" @click="closeMenu">常見的 DNS record</a>
+      </li>
+    </ul>
+  </div>
+  <main class="bg-gray-100">
+    <div class="py-2 px-5 md:px-20 lg:ps-80 lg:pe-30 transition-all duration-500 ease-in-out">
       <h3 class="text-2xl font-medium mt-10 mb-2 px-2" id="什麼是網域">什麼是網域</h3>
       <div class=" bg-white p-4 rounded-xl">
         <p class="text-lg">
@@ -148,4 +149,11 @@ const toggleMenu = () => {
   showMenu.value = !showMenu.value;
 }
 </script>
-<style scoped></style>
+<style scoped>
+:target:before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin: -100px 0 0;
+}
+</style>
