@@ -25,6 +25,7 @@ import Footer from "./components/Footer.vue";
   position: absolute;
   transform-origin: center;
   transition: all 0.3s ease;
+  width: 100vw;
 }
 
 .slide-right-enter-from {
@@ -48,6 +49,7 @@ import Footer from "./components/Footer.vue";
   position: absolute;
   transform-origin: center;
   transition: all 0.3s ease;
+  width: 100vw;
 }
 
 .slide-left-enter-from {
