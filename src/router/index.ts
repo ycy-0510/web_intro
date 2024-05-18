@@ -3,7 +3,8 @@ const routes = [
     {
         path: '/',
         component: () => import('../views/Home.vue'),
-        name: '首頁'
+        name: 'Home',
+        meta: { transition: 'slide-left' },
     },
     {
         path: '/domain-dns',

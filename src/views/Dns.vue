@@ -1,14 +1,15 @@
 <template>
-  <div class="sticky top-0 w-full z-50">
+  <!-- navbar -->
+  <div class="sticky top-0 w-full z-40">
     <nav>
       <div class="flex flex-row min-h-16" :class="{
         ' bg-gray-50 border-b border-b-gray-300': scrolled || showMenu,
         'bg-gray-100': !scrolled && !showMenu,
       }">
         <div class="basis-40 my-auto ms-auto py-2 ps-2">
-          <a @click="router.go(-1)" class="text-2xl font-medium flex items-center text-sky-500 hover:text-sky-300">
+          <RouterLink to="/" class="text-2xl font-medium flex items-center text-sky-500 hover:text-sky-300">
             <font-awesome-icon icon="fa-solid fa-angle-left" class="h-8 me-1" /><span>Home</span>
-          </a>
+          </RouterLink>
         </div>
         <div class="basis-full my-auto">
           <h2 class="text-2xl font-medium text-center">網域與 DNS</h2>
@@ -19,47 +20,51 @@
     </nav>
   </div>
 
-  <div class="fixed  left-5 bottom-10 z-40 transition-transform duration-500 lg:scale-0">
-    <button @click="toggleMenu"
-      class=" bg-gray-200  text-sky-500 shadow-lg h-20 w-20 rounded-full transition-transform duration-500 ease-in-out"
-      :class="{ 'translate-x-72': showMenu }">
+  <!-- toggle botton -->
+  <div class="fixed bottom-12 left-5 z-30 transition-transform duration-500 ease-in-out lg:scale-0"
+    :class="{ 'translate-x-72': showMenu }">
+    <button @click="toggleMenu" class=" bg-gray-200  text-sky-500 shadow-lg h-20 w-20 rounded-full">
       <font-awesome-icon icon="fa-solid fa-bars" class="h-1/2 transition-transform duration-500 ease-in-out"
         :class="{ 'rotate-90 w-0 h-0 opacity-0': showMenu }" />
       <font-awesome-icon icon="fa-solid fa-close" class="h-1/2 transition-transform duration-500 ease-in-out"
         :class="{ '-rotate-90 w-0 h-0  opacity-0': !showMenu }" />
     </button>
   </div>
-  <div class="fixed w-screen h-lvh z-30 bg-black transition-opacity duration-500 ease-in-out lg:hidden"
+  <!-- menu -->
+  <div class="fixed w-screen h-lvh z-20 bg-black transition-opacity duration-500 ease-in-out lg:hidden"
     :class="{ 'opacity-30': showMenu, 'opacity-0': !showMenu }" @click="closeMenu">
   </div>
-  <div class="fixed w-72 h-lvh z-40 bg-gray-100 menu -left-72  transition-transform duration-500 ease-in-out lg:translate-x-72"
+  <div class="fixed w-full h-lvh z-40 bg-white -left-full "></div>
+  <div class="fixed w-72 h-lvh z-30 bg-gray-100 -left-72  transition-all duration-500 ease-in-out lg:translate-x-72 "
     :class="{ 'translate-x-72': showMenu }">
+    <h3 class="text-2xl px-6 py-2 mt-4 font-medium">Index</h3>
     <ul class="px-4 py-2 bg-white rounded-xl m-4">
       <li class="text-lg py-2">
-        <a href="#什麼是網域" @click="closeMenu">什麼是網域</a>
+        <a href="#什麼是網域" @click="closeMenu" class=" text-sky-500 hover:text-sky-300">什麼是網域</a>
       </li>
       <hr>
       <li class="text-lg py-2">
-        <a href="#常見的頂級域名" @click="closeMenu">常見的頂級域名</a>
+        <a href="#常見的頂級域名" @click="closeMenu" class=" text-sky-500 hover:text-sky-300">常見的頂級域名</a>
       </li>
       <hr>
       <li class="text-lg py-2">
-        <a href="#子網域與子目錄" @click="closeMenu">子網域與子目錄</a>
+        <a href="#子網域與子目錄" @click="closeMenu" class=" text-sky-500 hover:text-sky-300">子網域與子目錄</a>
       </li>
       <hr>
       <li class="text-lg py-2">
-        <a href="#哪裡可以買網域" @click="closeMenu">哪裡可以買網域</a>
+        <a href="#哪裡可以買網域" @click="closeMenu" class=" text-sky-500 hover:text-sky-300">哪裡可以買網域</a>
       </li>
       <hr>
       <li class="text-lg py-2">
-        <a href="#什麼是DNS" @click="closeMenu">什麼是DNS</a>
+        <a href="#什麼是DNS" @click="closeMenu" class=" text-sky-500 hover:text-sky-300">什麼是DNS</a>
       </li>
       <hr>
       <li class="text-lg py-2">
-        <a href="#常見的 DNS record" @click="closeMenu">常見的 DNS record</a>
+        <a href="#常見的 DNS record" @click="closeMenu" class=" text-sky-500 hover:text-sky-300">常見的 DNS record</a>
       </li>
     </ul>
   </div>
+  <!-- page -->
   <main class="bg-gray-100">
     <div class="py-2 px-5 md:px-20 lg:ps-80 lg:pe-30 transition-all duration-500 ease-in-out">
       <h3 class="text-2xl font-medium mt-10 mb-2 px-2" id="什麼是網域">什麼是網域</h3>
@@ -123,16 +128,17 @@
 </template>
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import router from "../router";
+import { RouterLink } from "vue-router";
 
 const scrolled = ref(false);
 const showMenu = ref(false);
 window.addEventListener("scroll", () => handleScroll());
 
 onMounted(() => {
-  window.scrollTo(0, 0);
   handleScroll();
+  window.scrollTo(0, 0);
 });
+
 
 const handleScroll = () => {
   if (window.scrollY > 2) {
