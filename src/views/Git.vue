@@ -34,9 +34,9 @@
     <div class="fixed w-screen h-lvh z-20 bg-black transition-opacity duration-500 ease-in-out lg:hidden"
         :class="{ 'opacity-30': showMenu, 'opacity-0': !showMenu }" @click="closeMenu">
     </div>
-    <div class="fixed w-full h-lvh z-40 bg-white -left-full "></div>
-    <div class="fixed w-72 h-lvh z-30 bg-gray-100 -left-72  transition-all duration-500 ease-in-out lg:translate-x-72 "
-        :class="{ 'translate-x-72': showMenu }">
+    <!-- <div class="fixed w-full h-lvh z-40 bg-white -left-full "></div> -->
+    <div class="fixed left-0 w-72 h-lvh z-30 bg-gray-100  transition-all duration-500 ease-in-out  "
+        :class="{ '-translate-x-72 lg:translate-x-0 opacity-0 lg:opacity-100': !showMenu }">
         <h3 class="text-2xl px-6 py-2 mt-4 font-medium">Index</h3>
         <ul class="px-4 py-2 bg-white rounded-xl m-4">
             <li class="text-lg py-2">
