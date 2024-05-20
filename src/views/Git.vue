@@ -23,7 +23,7 @@
     <!-- toggle botton -->
     <div class="fixed bottom-12 left-5 z-30 transition-transform duration-500 ease-in-out lg:scale-0"
         :class="{ 'translate-x-72': showMenu }">
-        <button @click="toggleMenu" class=" bg-gray-200  text-sky-500 shadow-lg h-20 w-20 rounded-full">
+        <button @click="toggleMenu" class=" bg-gray-200  text-sky-500 shadow-lg h-20 w-20 rounded-full" aria-label="切換選單">
             <font-awesome-icon icon="fa-solid fa-bars" class="h-1/2 transition-transform duration-500 ease-in-out"
                 :class="{ 'rotate-90 w-0 h-0 opacity-0 pointer-events-none': showMenu }" />
             <font-awesome-icon icon="fa-solid fa-close" class="h-1/2 transition-transform duration-500 ease-in-out"
