@@ -4,8 +4,8 @@
       class="flex flex-col items-center justify-center h-screen bg-cyan-950 opacity-90 bg-cover bg-blend-overlay p-4"
       style="background-image: url('technology.jpg')"
     >
-      <h1 class="text-7xl font-bold mb-4 text-white">Web introduction</h1>
-      <p class="text-3xl text-gray-200 underline mb-8">
+      <h1 class="text-5xl font-bold mb-4 text-white">Web introduction</h1>
+      <p class="text-2xl text-gray-200 underline mb-8">
         學習關於 網域與 DNS、Vue 和 GitFlow
       </p>
       <div class="flex flex-col items-center">
@@ -30,8 +30,8 @@
           </div>
         </div>
         <div class="basis-1/2 p-4 my-auto">
-          <h2 class="text-4xl text-white font-bold mb-2">網域與 DNS</h2>
-          <p class="text-2xl text-gray-200 mb-4">連結世界的橋樑：解析網域與DNS的重要性</p>
+          <h2 class="text-3xl text-white font-bold mb-2">網域與 DNS</h2>
+          <p class="text-xl text-gray-200 mb-4">連結世界的橋樑：解析網域與DNS的重要性</p>
           <RouterLink
             to="/domain-dns"
             class="bg-white hover:bg-gray-200 text-sky-500 font-bold py-2 px-4 rounded-xl text-center text-lg"
@@ -49,8 +49,8 @@
           </div>
         </div>
         <div class="basis-1/2 p-4 my-auto order-2 md:order-1">
-          <h2 class="text-4xl text-sky-800 font-bold mb-2">Vue.js</h2>
-          <p class="text-2xl text-gray-800 mb-4">
+          <h2 class="text-3xl text-sky-800 font-bold mb-2">Vue.js</h2>
+          <p class="text-xl text-gray-800 mb-4">
             Vue.js：打造流暢、靈活、高效的前端應用體驗
           </p>
           <RouterLink
@@ -70,8 +70,8 @@
           </div>
         </div>
         <div class="basis-1/2 p-4 my-auto">
-          <h2 class="text-4xl text-white font-bold mb-2">GitFlow</h2>
-          <p class="text-2xl text-gray-200 mb-4">
+          <h2 class="text-3xl text-white font-bold mb-2">GitFlow</h2>
+          <p class="text-xl text-gray-200 mb-4">
             GitFlow：基於分支管理策略的協作流程及版本控制模型
           </p>
           <RouterLink

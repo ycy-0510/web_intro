@@ -25,14 +25,14 @@
         :class="{ 'translate-x-72': showMenu }">
         <button @click="toggleMenu" class=" bg-gray-200  text-sky-500 shadow-lg h-20 w-20 rounded-full">
             <font-awesome-icon icon="fa-solid fa-bars" class="h-1/2 transition-transform duration-500 ease-in-out"
-                :class="{ 'rotate-90 w-0 h-0 opacity-0': showMenu }" />
+                :class="{ 'rotate-90 w-0 h-0 opacity-0 pointer-events-none': showMenu }" />
             <font-awesome-icon icon="fa-solid fa-close" class="h-1/2 transition-transform duration-500 ease-in-out"
-                :class="{ '-rotate-90 w-0 h-0  opacity-0': !showMenu }" />
+                :class="{ '-rotate-90 w-0 h-0  opacity-0 pointer-events-none': !showMenu }" />
         </button>
     </div>
     <!-- menu -->
     <div class="fixed w-screen h-lvh z-20 bg-black transition-opacity duration-500 ease-in-out lg:hidden"
-        :class="{ 'opacity-30': showMenu, 'opacity-0': !showMenu }" @click="closeMenu">
+    :class="{ 'opacity-30': showMenu, 'opacity-0 invisible': !showMenu }" @click="closeMenu">
     </div>
     <!-- <div class="fixed w-full h-lvh z-40 bg-white -left-full "></div> -->
     <div class="fixed left-0 w-72 h-lvh z-30 bg-gray-100  transition-all duration-500 ease-in-out  "
