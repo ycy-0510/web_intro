@@ -86,7 +86,7 @@
     placeholder="請輸入年齡（0）"
     v-model="num" 
 />
-&lt;p v-if="num &lt; 0" class="text-red-500">不是合法年齡&lt;/p>
+&lt;p v-if="num &lt; 0">不是合法年齡&lt;/p>
 &lt;p v-else-if="num &lt; 14">你是幼年人口！&lt;/p>
 &lt;p v-else-if="num &lt; 65">你是青年人口！&lt;/p>
 &lt;p v-else>你是老年人口！&lt;/p>

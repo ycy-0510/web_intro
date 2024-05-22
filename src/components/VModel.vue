@@ -79,7 +79,6 @@
           <pre class="language-html bg-transparent">
 <code class="w-full">
 &lt;textarea
-    class="border-2 border-sky-500 rounded-md p-2 m-2 w-full"
     rows="5"
     placeholder="請輸入文字或html"
     v-model="text"
